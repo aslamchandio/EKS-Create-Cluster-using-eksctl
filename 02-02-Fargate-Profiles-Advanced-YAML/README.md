@@ -15,19 +15,19 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: eksdemo1  # Name of the EKS Cluster
+  name: ekscluster2 # Name of the EKS Cluster
   region: us-east-1
 fargateProfiles:
-  - name: fp-app2
+  - name: fp-app1
     selectors:
       # All workloads in the "ns-app2" Kubernetes namespace will be
       # scheduled onto Fargate:      
-      - namespace: ns-app2
-  - name: fp-ums
+      - namespace: ns-app1
+  - name: fp-app2
     selectors:
       # All workloads in the "ns-ums" Kubernetes namespace matching the following
       # label selectors will be scheduled onto Fargate:      
-      - namespace: ns-ums
+      - namespace: ns-app2
         labels:
           runon: fargate     
   
@@ -36,16 +36,16 @@ fargateProfiles:
 ## Step-03: Create Fargate Profiles using YAML files
 ```
 # Create Fargate Profiles using YAML file
-eksctl create fargateprofile -f kube-manifests/01-Fargate-Advanced-Profiles/01-fargate-profiles.yml
+eksctl create fargateprofile -f 01- eks-fargateprofiles
 ```
 
 ## Step-04:  Get list of Fargate profiles
 ```
 # List Fargate profiles
-eksctl get fargateprofile --cluster eksdemo1
+eksctl get fargateprofile --cluster ekscluster2
 
 # View in yaml format
-eksctl get fargateprofile --cluster eksdemo1 -o yaml
+eksctl get fargateprofile --cluster ekscluster2 -o yaml
 ```
 
 ## Step-05: Review App1, App2 and UMS Manifests

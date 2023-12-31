@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   name: app2-nginx-deployment
   labels:
-    app: app2-nginx 
+    app: app2-nginx
+    runon: fargate     
   namespace: ns-app2
 spec:
   replicas: 2
@@ -14,10 +15,11 @@ spec:
     metadata:
       labels:
         app: app2-nginx
+        runon: fargate
     spec:
       containers:
         - name: app2-nginx
-          image: stacksimplify/kube-nginxapp2:1.0.0
+          image: aslam24/nginx-web-grandcoffee:v1
           ports:
             - containerPort: 80
           resources:
@@ -34,10 +36,11 @@ metadata:
   name: app2-nginx-nodeport-service
   labels:
     app: app2-nginx
+    runon: fargate
   namespace: ns-app2
   annotations:
 #Important Note:  Need to add health check path annotations in service level if we are planning to use multiple targets in a load balancer
-    alb.ingress.kubernetes.io/healthcheck-path: /app2/index.html
+    alb.ingress.kubernetes.io/healthcheck-path: /index.html
     # For Fargate
     alb.ingress.kubernetes.io/target-type: ip        
 spec:

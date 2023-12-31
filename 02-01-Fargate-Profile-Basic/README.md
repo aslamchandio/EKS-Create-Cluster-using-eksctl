@@ -21,8 +21,6 @@
 # Check version
 eksctl version
 
-# Update eksctl on mac
-brew upgrade eksctl && brew link --overwrite eksctl
 
 # Check version
 eksctl version

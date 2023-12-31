@@ -4,7 +4,7 @@ metadata:
   name: app1-nginx-deployment
   labels:
     app: app1-nginx
-  namespace: fp-dev 
+  namespace: fp-dev
 spec:
   replicas: 2
   selector:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app1-nginx
-          image: stacksimplify/kube-nginxapp1:1.0.0
+          image: aslam24/nginx-web-carserv:v1 
           ports:
             - containerPort: 80
           resources:
@@ -34,10 +34,10 @@ metadata:
   name: app1-nginx-nodeport-service
   labels:
     app: app1-nginx
-  namespace: fp-dev  
+  namespace: fp-dev
   annotations:
 #Important Note:  Need to add health check path annotations in service level if we are planning to use multiple targets in a load balancer    
-    alb.ingress.kubernetes.io/healthcheck-path: /app1/index.html
+    alb.ingress.kubernetes.io/healthcheck-path: /index.html
 spec:
   type: NodePort
   selector:
