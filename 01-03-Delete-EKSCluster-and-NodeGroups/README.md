@@ -8,11 +8,11 @@ eksctl get clusters
 
 # Capture Node Group name
 eksctl get nodegroup --cluster=<clusterName>
-eksctl get nodegroup --cluster=eksdemo1
+eksctl get nodegroup --cluster=ekscluster1
 
 # Delete Node Group
 eksctl delete nodegroup --cluster=<clusterName> --name=<nodegroupName>
-eksctl delete nodegroup --cluster=eksdemo1 --name=eksdemo1-ng-public1
+eksctl delete nodegroup --cluster=eksdemo1 --name=ekscluster1-ng-private
 ```
 
 ## Step-02: Delete Cluster  
@@ -20,7 +20,7 @@ eksctl delete nodegroup --cluster=eksdemo1 --name=eksdemo1-ng-public1
 ```
 # Delete Cluster
 eksctl delete cluster <clusterName>
-eksctl delete cluster eksdemo1
+eksctl delete cluster ekscluster1
 ```
 
 ## Important Notes

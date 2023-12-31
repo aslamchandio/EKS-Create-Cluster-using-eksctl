@@ -1,6 +1,6 @@
 # Step-01: Create EKS Cluster with yml
 
-## Create Fargate Profile manifest
+## Create EKS Cluster manifest
 ```yml
 
 apiVersion: eksctl.io/v1alpha5
@@ -82,8 +82,13 @@ cloudWatch:
   
 ```
 
-# Step-02: Create Fargate Profiles using YAML files
+# Step-02: Create EKS Cluster using YAML files
 ```
-# Create Fargate Profiles using YAML file
-eksctl create fargateprofile -f 01-eks-cluster.yml
+# Create EKS Cluster  using YAML file
+eksctl create cluster -f 01-eks-cluster.yml
+```
+# Step-03: Delete EKS Cluster using YAML files
+```
+# Delete EKS Cluster  using YAML file
+eksctl delete cluster -f 01-eks-cluster.yml
 ```
