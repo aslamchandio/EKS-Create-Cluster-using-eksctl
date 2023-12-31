@@ -152,8 +152,10 @@ Reference-1: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 ### Step-02-02: Windows 10 - Install and configure kubectl
 
+```
 
 # Download the latest 1.29 patch release: kubectl 1.29.0.
+...
 
 Or if you have curl installed, use this command:
 
@@ -224,6 +226,7 @@ CertUtil -hashfile eksctl_Windows_amd64.zip SHA256
  ```
 
 #### Using Git Bash: 
+
 ```sh
 # for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
 ARCH=amd64
