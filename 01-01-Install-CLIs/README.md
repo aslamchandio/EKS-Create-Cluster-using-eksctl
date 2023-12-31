@@ -7,13 +7,12 @@
 
 ## Step-01: Install AWS CLI
 - Reference-2: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-version.html
-### Step-01-01: MAC - Install and configure AWS CLI
+### Step-01-01: Linux - Install and configure AWS CLI
 - Download the binary and install via command line using below two commands. 
 ```
 # Download Binary
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
 
 # Unzip the Packge 
 unzip awscliv2.zip
@@ -27,13 +26,12 @@ sudo ./aws/install
 /usr/local/bin/aws
 
 aws --version
-aws-cli/2.0.7 Python/3.7.4 Darwin/19.4.0 botocore/2.0.0dev11
+aws-cli/2.10.0 Python/3.11.2 Linux/4.14.133-113.105.amzn2.x86_64 botocore/2.4.5
 
-which aws
 ```
 
 
-### Step-01-03: Configure AWS Command Line using Security Credentials
+### Step-01-02: Configure AWS Command Line using Security Credentials
 - Go to AWS Management Console --> Services --> IAM
 - Select the IAM User: kalyan 
 - **Important Note:** Use only IAM user to generate **Security Credentials**. Never ever use Root User. (Highly not recommended)
