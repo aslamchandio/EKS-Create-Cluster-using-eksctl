@@ -11,12 +11,12 @@
 - Download the binary and install via command line using below two commands. 
 ```
 # Download Binary
-```
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
 
 # Unzip the Packge 
 unzip awscliv2.zip
+...
 
 # Install the binary
 sudo ./aws/install
@@ -25,12 +25,12 @@ sudo ./aws/install
 ```
 # which aws
 /usr/local/bin/aws
+...
 
 aws --version
 aws-cli/2.10.0 Python/3.11.2 Linux/4.14.133-113.105.amzn2.x86_64 botocore/2.4.5
 
 ```
-
 
 ### Step-01-02: Configure AWS Command Line using Security Credentials
 - Go to AWS Management Console --> Services --> IAM
