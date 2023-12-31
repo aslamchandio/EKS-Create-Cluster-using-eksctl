@@ -11,6 +11,7 @@
 - Download the binary and install via command line using below two commands. 
 ```
 # Download Binary
+```
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
 
@@ -66,13 +67,13 @@ curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.28.3/2023-11-14/bin/linu
 
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.7/2023-11-14/bin/linux/amd64/kubectl
 
-# (Optional) Verify the downloaded binary with the SHA-256 checksum for your binary.
+- # (Optional) Verify the downloaded binary with the SHA-256 checksum for your binary.
 
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.28.3/2023-11-14/bin/linux/amd64/kubectl.sha256
 
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.7/2023-11-14/bin/linux/amd64/kubectl.sha256
 
-# Check the SHA-256 checksum for your downloaded binary with one of the following commands.
+- # Check the SHA-256 checksum for your downloaded binary with one of the following commands.
 
 sha256sum -c kubectl.sha256
 
