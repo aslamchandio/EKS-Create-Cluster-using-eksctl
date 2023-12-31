@@ -11,6 +11,10 @@
 - Create EKS Node Groups
 - Verify Cluster, Node Groups, EC2 Instances, IAM Policies and Node Groups
 
+## Prerequisites for EKS Cluster is VPC 
+
+### References (My Git Hub Repo - terraform-on-awscloud-eks/01- VPC-EKS-Private-Prod/)
+- https://github.com/aslamchandio/terraform-on-awscloud-eks/tree/main/01-%20VPC-EKS-Private-Prod
 
 ## Step-01: Create EKS Cluster using eksctl
 - It will take 15 to 20 minutes to create the Cluster Control Plane 
